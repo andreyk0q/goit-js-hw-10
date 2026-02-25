@@ -33,7 +33,7 @@ flatpickr(refs.input, {
 
       iziToast.error({
         title: 'Error',
-        message: 'Illegal operation',
+        message: 'Please choose a date in the future',
         position: 'topRight',
       });
 
