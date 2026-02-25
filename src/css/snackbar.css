@@ -1,0 +1,121 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 36px 0 0 156px;
+    font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+        sans-serif;
+    background: #ffffff;
+    color: #2e2f42;
+}
+
+/* ===== Form block (compact like in mockup) ===== */
+.form {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Label + input stacked */
+.form-label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+/* Input full width, 40 height */
+.form-input {
+    width: 100%;
+    height: 40px;
+
+    padding: 8px 16px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+
+    outline: transparent;
+    background: #ffffff;
+
+    transition: border-color 150ms ease;
+}
+
+.form-input:hover {
+    border-color: #000000;
+}
+
+.form-input:focus {
+    border-color: #4e75ff;
+}
+
+/* ===== Fieldset (State) ===== */
+.fieldset {
+    margin: 0;
+    padding: 12px 16px 16px;
+
+    border: 1px solid #808080;
+    border-radius: 4px;
+}
+
+/* Legend like in screenshot */
+.legend {
+    padding: 0 6px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+/* Radio row */
+.radio-row {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.radio {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+/* ===== Button full width ===== */
+.btn {
+    width: 100%;
+    height: 40px;
+
+    border: 1px solid #808080;
+    border-radius: 4px;
+
+    background: #f5f5f5;
+    color: #2e2f42;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    cursor: pointer;
+    transition: background-color 150ms ease;
+}
+
+.btn:hover {
+    background: #eaeaea;
+}

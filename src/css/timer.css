@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* =========================
+   Base
+========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Montserrat, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+        sans-serif;
+    background: #ffffff;
+    color: #2e2f42;
+
+    /* як у фігмі: блок зверху зліва */
+    padding-top: 36px;
+    padding-left: 156px;
+}
+
+/* =========================
+   Controls row (input + button)
+========================= */
+.timer-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Input (272 x 40) */
+.timer-controls #datetime-picker {
+    width: 272px !important;
+    height: 40px !important;
+
+    padding: 8px 16px !important;
+    border: 1px solid #808080 !important;
+    border-radius: 4px !important;
+
+    outline: transparent !important;
+    background: #ffffff !important;
+
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.04em !important;
+    color: #2e2f42 !important;
+
+    display: inline-block !important;
+    margin: 0 !important;
+
+    transition: border-color 150ms ease !important;
+}
+
+.timer-controls #datetime-picker:hover {
+    border-color: #000000 !important;
+}
+
+.timer-controls #datetime-picker:focus {
+    border-color: #4e75ff !important;
+}
+
+.timer-controls #datetime-picker:disabled {
+    border-color: #808080 !important;
+    color: #808080 !important;
+    background: #ffffff !important;
+    cursor: not-allowed !important;
+}
+
+/* Button (75 x 40) */
+.timer-controls button[data-start] {
+    width: 75px !important;
+    height: 40px !important;
+
+    padding: 8px 16px !important;
+    border: none !important;
+    border-radius: 8px !important;
+
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.04em !important;
+
+    background: #4e75ff !important;
+    color: #ffffff !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    cursor: pointer !important;
+
+    transition: background-color 150ms ease !important;
+}
+
+.timer-controls button[data-start]:hover {
+    background: #6c8cff !important;
+}
+
+.timer-controls button[data-start]:disabled {
+    background: #cfcfcf !important;
+    color: #989898 !important;
+    cursor: not-allowed !important;
+}
+
+/* =========================
+   Timer (gap 24, margin-top 32)
+========================= */
+.timer {
+    margin-top: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.field {
+    width: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.label {
+    margin-top: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+/* =========================
+   flatpickr — FIX to match Figma
+   size: 280 x 352, padding 16, bg #F5F5F5, radius 8
+========================= */
+.flatpickr-calendar {
+    width: 280px !important;
+    background: #f5f5f5 !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+
+    padding: 16px !important;
+    margin-top: 4px !important;
+}
+
+.flatpickr-calendar:before,
+.flatpickr-calendar:after {
+    display: none !important;
+}
+
+/* inside sizing */
+.flatpickr-innerContainer,
+.flatpickr-rContainer,
+.flatpickr-days {
+    width: 248px !important;
+    /* 280 - 16*2 */
+}
+
+/* month header */
+.flatpickr-months {
+    align-items: center !important;
+    margin-bottom: 12px !important;
+}
+
+.flatpickr-current-month {
+    padding: 0 !important;
+    font-family: Montserrat, sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.04em !important;
+    color: #2e2f42 !important;
+}
+
+/* arrows */
+.flatpickr-prev-month,
+.flatpickr-next-month {
+    padding: 0 !important;
+}
+
+.flatpickr-prev-month svg,
+.flatpickr-next-month svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* weekdays row */
+.flatpickr-weekdays {
+    width: 248px !important;
+    margin: 0 0 8px !important;
+}
+
+.flatpickr-weekdaycontainer {
+    width: 248px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.flatpickr-weekday {
+    width: 32px !important;
+    max-width: 32px !important;
+    flex: 0 0 32px !important;
+
+    font-family: Montserrat, sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.04em !important;
+    color: #2e2f42 !important;
+}
+
+/* days grid */
+.dayContainer {
+    width: 248px !important;
+    min-width: 248px !important;
+    max-width: 248px !important;
+
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+}
+
+.flatpickr-day {
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    margin: 0 0 4px !important;
+
+    border: 0 !important;
+    border-radius: 50% !important;
+
+    font-family: Montserrat, sans-serif !important;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    letter-spacing: 0.04em !important;
+    color: #2e2f42 !important;
+
+    background: transparent !important;
+}
+
+/* disabled days */
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover {
+    color: #c1c1c1 !important;
+    background: transparent !important;
+    cursor: default !important;
+}
+
+/* hover */
+.flatpickr-day:hover {
+    background: rgba(78, 117, 255, 0.15) !important;
+}
+
+/* selected */
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+    background: #4e75ff !important;
+    color: #ffffff !important;
+}
+
+/* today outline */
+.flatpickr-day.today {
+    border: 1px solid #4e75ff !important;
+}
+
+/* time panel bottom */
+.flatpickr-time {
+    width: 248px !important;
+    margin-top: 12px !important;
+    border-top: 1px solid rgba(46, 47, 66, 0.2) !important;
+}
+
+.flatpickr-time input,
+.flatpickr-time .flatpickr-am-pm {
+    font-family: Montserrat, sans-serif !important;
+    font-size: 16px !important;
+}
+
+/* =========================
+   iziToast error (302 x 64)
+========================= */
+.iziToast {
+    width: 302px !important;
+    min-height: 64px !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-family: Montserrat, sans-serif !important;
+}
+
+.iziToast.iziToast-color-red {
+    background: #ef4040 !important;
+}
+
+.iziToast .iziToast-title {
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    color: #ffffff !important;
+}
+
+.iziToast .iziToast-message {
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    letter-spacing: 0.5px !important;
+    color: #ffffff !important;
+}
+
+.iziToast .iziToast-close {
+    width: 24px !important;
+    height: 24px !important;
+    opacity: 1 !important;
+}
