@@ -14,6 +14,7 @@ const refs = {
 };
 
 let userSelectedDate = null;
+
 let timerId = null;
 
 // Start disabled on load
